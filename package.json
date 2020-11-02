@@ -6,8 +6,9 @@
   "scripts": {
     "circom": "circom",
     "snarkjs": "snarkjs",
-    "compile": "circom circuit.circom && snarkjs setup -c circuit.json",
-    "rm": "rm circuit.json proving_key.json verification_key.json *log",
+    "witness": "cp input input.json && snarkjs calculatewitness",
+    "compile": "circom circuit.circom && snarkjs setup -c circuit.json && yarn witness",
+    "rm": "rm circuit.json proving_key.json verification_key.json input.json witness.json *log",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

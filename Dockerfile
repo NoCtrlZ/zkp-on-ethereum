@@ -6,4 +6,4 @@ COPY circuit.circom .
 
 RUN yarn
 
-ENTRYPOINT [ "yarn", "circom", "circuit.circom", "-o", "circuit.json" ]
+ENTRYPOINT [ "yarn", "compile" ]

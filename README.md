@@ -2,4 +2,6 @@
 ## Setup
 ```
 $ yarn compile
+or
+$ docker-compose up
 ```
