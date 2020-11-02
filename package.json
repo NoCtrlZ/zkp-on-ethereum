@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "circom": "circom",
+    "snarkjs": "snarkjs",
+    "compile": "circom circuit.circom && snarkjs setup -c circuit.json",
+    "rm": "rm circuit.json proving_key.json verification_key.json *log",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +22,7 @@
   },
   "homepage": "https://github.com/NoCtrlZ/zkp-on-ethereum#readme",
   "dependencies": {
-    "circom": "0.0.35"
+    "circom": "0.0.35",
+    "snarkjs": "0.1.0"
   }
 }
