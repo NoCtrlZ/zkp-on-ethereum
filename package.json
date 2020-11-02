@@ -10,8 +10,9 @@
     "proof": "snarkjs proof",
     "verify": "snarkjs verify",
     "solc": "snarkjs generateverifier",
-    "compile": "circom circuit.circom && snarkjs setup -c circuit.json && yarn witness && yarn proof",
-    "rm": "rm circuit.json proving_key.json verification_key.json input.json witness.json *log",
+    "compile": "circom circuit.circom && snarkjs setup -c circuit.json && yarn witness && yarn proof && yarn verify && yarn solc",
+    "copy": "cp verifier.sol contracts",
+    "rm": "rm circuit.json proving_key.json verification_key.json input.json witness.json proof.json public.json *log",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

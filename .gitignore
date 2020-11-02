@@ -1,8 +1,9 @@
 node_modules
+build
 *.json
 *.log
 *.dat
 *.r1cs
 *.sym
 *.cpp
-./*.sol
+verifier.sol
