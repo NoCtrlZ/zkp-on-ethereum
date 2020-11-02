@@ -6,13 +6,16 @@
   "scripts": {
     "circom": "circom",
     "snarkjs": "snarkjs",
+    "truffle": "truffle",
     "witness": "cp input input.json && snarkjs calculatewitness",
     "proof": "snarkjs proof",
     "verify": "snarkjs verify",
     "solc": "snarkjs generateverifier",
     "compile": "circom circuit.circom && snarkjs setup -c circuit.json && yarn witness && yarn proof && yarn verify && yarn solc",
     "copy": "cp verifier.sol contracts",
-    "rm": "rm circuit.json proving_key.json verification_key.json input.json witness.json proof.json public.json *log",
+    "deploy": "truffle migrate --reset --network development",
+    "setup": "yarn compile && yarn copy && yarn deploy",
+    "rm": "rm circuit.json proving_key.json verification_key.json input.json witness.json proof.json public.json verifier.sol build *log",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

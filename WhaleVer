@@ -6,4 +6,4 @@ COPY circuit.circom .
 
 RUN yarn
 
-ENTRYPOINT [ "yarn", "compile" ]
+ENTRYPOINT [ "yarn", "setup" ]

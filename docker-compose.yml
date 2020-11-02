@@ -1,9 +1,20 @@
 version: '3'
 services:
   circom:
-    build: .
+    build:
+      context: .
+      dockerfile: WhaleVer
     container_name: circom
     tty: true
     stdin_open: true
     volumes:
       - .:/app
+  ganache:
+    build:
+      context: .
+      dockerfile: WhaleGan
+    container_name: ganache
+    tty: true
+    stdin_open: true
+    ports:
+      - "7545:7545"
