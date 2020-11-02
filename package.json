@@ -7,7 +7,10 @@
     "circom": "circom",
     "snarkjs": "snarkjs",
     "witness": "cp input input.json && snarkjs calculatewitness",
-    "compile": "circom circuit.circom && snarkjs setup -c circuit.json && yarn witness",
+    "proof": "snarkjs proof",
+    "verify": "snarkjs verify",
+    "solc": "snarkjs generateverifier",
+    "compile": "circom circuit.circom && snarkjs setup -c circuit.json && yarn witness && yarn proof",
     "rm": "rm circuit.json proving_key.json verification_key.json input.json witness.json *log",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

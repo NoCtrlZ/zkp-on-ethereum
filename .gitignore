@@ -5,3 +5,4 @@ node_modules
 *.r1cs
 *.sym
 *.cpp
+*.sol
