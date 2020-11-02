@@ -15,7 +15,7 @@
     "copy": "cp verifier.sol contracts",
     "deploy": "truffle migrate --reset --network development",
     "cal": "echo `snarkjs generatecall` >> test/args.js && echo ']\nexports.args = args' >> test/args.js",
-    "setup": "yarn compile && yarn copy && yarn cal",
+    "setup": "yarn compile && yarn copy && yarn cal && yarn test",
     "rm": "rm -rf circuit.json proving_key.json verification_key.json input.json witness.json proof.json public.json verifier.sol build contracts/verifier.sol *log",
     "test": "truffle test"
   },
